@@ -1,0 +1,39 @@
+
+/* 参加案内 */
+
+.participation-section {
+    text-align: center;
+}
+
+.application-notice {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #fff3f8;
+    border: 2px solid #f4a9c5;
+    border-radius: 15px;
+    line-height: 1.8;
+}
+
+.application-notice p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a34e76;
+}
+
+.application-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 13px 24px;
+    background-color: #d9689b;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(120, 60, 85, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.application-button:hover {
+    background-color: #bd4f82;
+}
