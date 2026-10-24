@@ -37,3 +37,171 @@
 .application-button:hover {
     background-color: #bd4f82;
 }
+
+
+/* ==============================
+   手紙カード
+   ============================== */
+
+.fan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.fan-letter {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 22px;
+    background-color: #fffdf8;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 31px,
+        #f3dfe5 32px
+    );
+    border: 1px solid #e9b6c9;
+    border-radius: 5px 18px 5px 18px;
+    box-shadow: 3px 5px 12px rgba(120, 60, 85, 0.12);
+    overflow-wrap: anywhere;
+    line-height: 1.9;
+}
+
+.letter-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8b2c8;
+}
+
+.letter-icon {
+    font-size: 25px;
+}
+
+.letter-label {
+    color: #a34e76;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.letter-name {
+    margin: 16px 0;
+    color: #a34e76;
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.letter-name span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.letter-body {
+    min-width: 0;
+}
+
+.letter-answer {
+    margin: 15px 0;
+}
+
+.letter-answer h4,
+.letter-image h4 {
+    margin: 0 0 4px;
+    color: #a34e76;
+    font-size: 14px;
+}
+
+.letter-answer p {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.letter-end {
+    margin-top: 22px;
+    padding-top: 10px;
+    border-top: 1px dashed #e8b2c8;
+    color: #a34e76;
+    text-align: right;
+    font-size: 13px;
+}
+
+.letter-image a {
+    color: #a34e76;
+    overflow-wrap: anywhere;
+}
+
+/* カテゴリーボタン */
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin: 20px 0;
+}
+
+.filter-button {
+    padding: 8px 15px;
+    border: 2px solid #e8a9c2;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #a34e76;
+    cursor: pointer;
+}
+
+.filter-button.active {
+    background-color: #d9689b;
+    border-color: #d9689b;
+    color: #fff;
+}
+
+/* 表示人数 */
+
+.result-count {
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* 参加者がいないとき */
+
+.empty-message {
+    grid-column: 1 / -1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0;
+    padding: 24px;
+    background-color: #fff3f8;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* ランダムに見る */
+
+#random-result {
+    margin-top: 22px;
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+    .fan-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .fan-letter {
+        padding: 18px;
+    }
+
+    .letter-name {
+        font-size: 19px;
+    }
+
+    .filter-button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
