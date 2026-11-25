@@ -1,4 +1,3 @@
-
 /* 参加案内 */
 
 .participation-section {
@@ -55,12 +54,10 @@
     min-width: 0;
     padding: 22px;
     background-color: #fffdf8;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        transparent 0,
-        transparent 31px,
-        #f3dfe5 32px
-    );
+    background-image: repeating-linear-gradient(to bottom,
+            transparent 0,
+            transparent 31px,
+            #f3dfe5 32px);
     border: 1px solid #e9b6c9;
     border-radius: 5px 18px 5px 18px;
     box-shadow: 3px 5px 12px rgba(120, 60, 85, 0.12);
@@ -149,6 +146,11 @@
     background-color: #fff;
     color: #a34e76;
     cursor: pointer;
+
+    /* 文字の配置調整 */
+    text-align: center;
+    white-space: normal;
+    line-height: 1.5;
 }
 
 .filter-button.active {
@@ -203,5 +205,1294 @@
     .filter-button {
         padding: 8px 12px;
         font-size: 13px;
+
+        text-align: center;
+        white-space: normal;
+        line-height: 1.5;
+    }
+}
+
+
+/* 投稿画像の表示 */
+
+.letter-image {
+    width: 100%;
+    margin: 12px auto 18px;
+    text-align: center;
+}
+
+.letter-image img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #fff3f8;
+}
+
+
+/* =====================================
+   さくなだふぁみりあのお手紙カード
+   新デザイン
+   ===================================== */
+
+/* カード全体 */
+.fan-letter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    overflow: hidden;
+
+    background: linear-gradient(145deg,
+            #fffafd,
+            #fff0f7);
+
+    border: 2px solid #f6b6d4;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(190, 100, 145, 0.15);
+}
+
+/* 画像エリア */
+.letter-photo {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+
+    background: #fff3f8;
+    border: 3px solid #f4a9cf;
+    border-radius: 16px;
+}
+
+/* 投稿画像 */
+.letter-photo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #fff3f8;
+}
+
+/* 画像がない場合 */
+.letter-no-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #c66b99;
+    background: #fff3f8;
+}
+
+.letter-no-image span {
+    font-size: 36px;
+}
+
+.letter-no-image p {
+    margin: 8px 0 0;
+    font-size: 14px;
+}
+
+/* 名前の表示 */
+.letter-name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    padding: 9px 18px;
+
+    color: #d65d99;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #f3a5cb;
+    border-radius: 30px;
+
+    box-shadow: 0 3px 7px rgba(160, 80, 120, 0.18);
+}
+
+.letter-name-icon {
+    font-size: 20px;
+}
+
+/* 手紙タイトル */
+.letter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    width: 100%;
+    margin: 16px 0 12px;
+    padding: 8px 4px;
+
+    color: #d65d99;
+    border-bottom: 2px dashed #f3a5cb;
+}
+
+.letter-heading h3 {
+    flex: 1;
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.letter-envelope,
+.letter-paw {
+    flex-shrink: 0;
+    font-size: 25px;
+}
+
+/* カード下部 */
+.letter-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: auto 0 0;
+    padding: 14px 4px 6px;
+
+    color: #d65d99;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    border-top: 1px solid #f8d1e3;
+}
+
+.letter-ribbon {
+    font-size: 19px;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+
+    .fan-letter {
+        padding: 9px;
+        border-radius: 16px;
+    }
+
+    .letter-photo {
+        height: 190px;
+    }
+
+    .letter-name {
+        right: 7px;
+        bottom: 7px;
+        padding: 7px 13px;
+        font-size: 14px;
+    }
+
+    .letter-name-icon {
+        font-size: 17px;
+    }
+
+    .letter-heading {
+        margin: 12px 0 8px;
+    }
+
+    .letter-heading h3 {
+        font-size: 17px;
+    }
+
+    .letter-envelope,
+    .letter-paw {
+        font-size: 21px;
+    }
+
+    .letter-end {
+        font-size: 13px;
+        gap: 5px;
+    }
+}
+
+
+/* =====================================
+   一覧カード：クリックでお手紙を開く
+   ===================================== */
+
+/* detailsの基本設定 */
+.fan-letter-expand {
+    display: block;
+}
+
+/* クリックする部分 */
+.fan-letter-summary {
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* 標準の三角マークを非表示 */
+.fan-letter-summary::-webkit-details-marker {
+    display: none;
+}
+
+.fan-letter-summary::marker {
+    content: "";
+}
+
+/* 開くための案内 */
+.letter-open-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 10px;
+    padding: 9px;
+
+    color: #d65d99;
+    font-size: 14px;
+    font-weight: bold;
+
+    background: #fff0f7;
+    border: 1px dashed #f3a5cb;
+    border-radius: 12px;
+}
+
+/* 開閉アイコン */
+.letter-open-icon {
+    transition: transform 0.2s ease;
+}
+
+/* 開いたとき */
+.fan-letter-expand[open] .letter-open-icon {
+    transform: rotate(180deg);
+}
+
+.fan-letter-expand[open] .letter-open-text {
+    font-size: 0;
+}
+
+.fan-letter-expand[open] .letter-open-text::after {
+    content: "お手紙を閉じる";
+    font-size: 14px;
+}
+
+/* 展開した回答部分 */
+.letter-details {
+    margin-top: 12px;
+    padding: 15px;
+
+    background: #fffafd;
+    border: 1px dashed #f3a5cb;
+    border-radius: 12px;
+}
+
+/* 質問と回答 */
+.letter-details .letter-answer {
+    padding: 12px 5px;
+    border-bottom: 1px dashed #f5c5dc;
+}
+
+.letter-details .letter-answer:last-child {
+    border-bottom: none;
+}
+
+.letter-details .letter-answer h4 {
+    margin: 0 0 7px;
+    color: #d65d99;
+    font-size: 15px;
+}
+
+.letter-details .letter-answer p {
+    margin: 0;
+    color: #76536a;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+    .letter-details {
+        padding: 12px;
+    }
+
+    .letter-details .letter-answer h4 {
+        font-size: 14px;
+    }
+
+    .letter-details .letter-answer p {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================
+   お手紙：全画面表示
+   ===================================== */
+
+/* 通常の一覧カード */
+.fan-letter-expand {
+    display: block;
+}
+
+/* クリック部分 */
+.fan-letter-summary {
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+
+.fan-letter-summary::-webkit-details-marker {
+    display: none;
+}
+
+.fan-letter-summary::marker {
+    content: "";
+}
+
+/* 閉じる案内：通常は非表示 */
+.letter-close-guide {
+    display: none;
+}
+
+/* 開く案内 */
+.letter-open-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px;
+
+    color: #d65d99;
+    font-weight: bold;
+    background: #fff0f7;
+    border: 1px dashed #f3a5cb;
+    border-radius: 12px;
+}
+
+/* =====================================
+   全画面で開いたとき
+   ===================================== */
+
+.fan-letter-expand[open] {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: #fff8fc;
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+/* 閉じる案内 */
+.fan-letter-expand[open] .letter-close-guide {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    width: fit-content;
+    margin: 0 0 12px auto;
+    padding: 10px 18px;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+
+    background: #d9689b;
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(120, 60, 85, 0.2);
+}
+
+/* 展開時の画像 */
+.fan-letter-expand[open] .letter-photo {
+    height: min(48vh, 420px);
+    min-height: 220px;
+}
+
+/* 展開時の画像を大きく */
+.fan-letter-expand[open] .letter-photo-img {
+    object-fit: contain;
+}
+
+/* 展開時のタイトル */
+.fan-letter-expand[open] .letter-heading h3 {
+    font-size: 25px;
+}
+
+/* 展開時の回答欄 */
+.fan-letter-expand[open] .letter-details {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+
+    background: #fff;
+    border: 2px dashed #f3a5cb;
+    border-radius: 18px;
+}
+
+/* 質問 */
+.fan-letter-expand[open] .letter-answer h4 {
+    font-size: 19px;
+}
+
+/* 回答 */
+.fan-letter-expand[open] .letter-answer p {
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* 開く案内は全画面時に非表示 */
+.fan-letter-expand[open] .letter-open-guide {
+    display: none;
+}
+
+/* 全画面時の下部 */
+.fan-letter-expand[open] .letter-end {
+    margin-top: 20px;
+    padding: 20px 5px;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+
+    .fan-letter-expand[open] {
+        padding: 10px;
+    }
+
+    .fan-letter-expand[open] .letter-photo {
+        height: 38vh;
+        min-height: 180px;
+    }
+
+    .fan-letter-expand[open] .letter-heading h3 {
+        font-size: 19px;
+    }
+
+    .fan-letter-expand[open] .letter-details {
+        margin: 12px auto;
+        padding: 15px;
+    }
+
+    .fan-letter-expand[open] .letter-answer h4 {
+        font-size: 16px;
+    }
+
+    .fan-letter-expand[open] .letter-answer p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .fan-letter-expand[open] .letter-name {
+        font-size: 14px;
+    }
+}
+
+
+/* =================================
+   カテゴリー選択後の回答一覧
+================================= */
+
+.answer-list {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+}
+
+.answer-list-item {
+    background: #fff;
+    border: 1px solid #f3b7ce;
+    border-radius: 14px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.answer-list-name {
+    font-weight: bold;
+    color: #d66b9b;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.answer-list-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+
+    /* 左揃え */
+    text-align: left;
+
+    /* 入力された改行を保持する */
+    white-space: pre-wrap;
+
+    /* 長い文字列の折り返し */
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+
+/* =================================
+   回答一覧：名前ボタン
+================================= */
+
+.answer-list-name {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #d66b9b;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.answer-list-name:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+/* 閉じている手紙は隠す */
+.answer-list-letter .fan-letter-expand:not([open]) {
+    display: none;
+}
+
+/* =================================
+   フォント設定
+================================= */
+
+/* サイト全体：Zen Maru Gothic */
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Zen Maru Gothic", sans-serif;
+}
+
+/* お手紙部分：Yomogi */
+.fan-letter {
+    font-family: "Yomogi", cursive;
+}
+
+/* =================================
+   名前検索
+================================= */
+
+.fan-search {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.fan-search label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d66b9b;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.fan-search input {
+    width: 100%;
+    padding: 13px 16px;
+    box-sizing: border-box;
+
+    border: 2px solid #f3a5c5;
+    border-radius: 25px;
+
+    background: #fff;
+    color: #555;
+
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+/* 入力中のデザイン */
+.fan-search input:focus {
+    border-color: #61c0f7;
+    box-shadow: 0 0 0 3px rgba(97, 192, 247, 0.2);
+}
+
+/* プレースホルダー */
+.fan-search input::placeholder {
+    color: #c5aab7;
+}
+
+/* ==============================
+   ページ上部へ戻るボタン
+============================== */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+
+    width: 55px;
+    height: 55px;
+
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+
+    background: #E76FA5;
+    color: #ffffff;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(180, 90, 130, 0.3);
+
+    /* 最初は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background 0.3s ease;
+}
+
+/* 表示状態 */
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* マウスを乗せたとき */
+.back-to-top:hover {
+    background: #D94F91;
+    transform: translateY(-4px);
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 48px;
+        height: 48px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 22px;
+    }
+}
+
+
+/* =====================================
+   SAKUFAMI COLORFUL MEMORY
+   ページデザインリニューアル
+===================================== */
+
+/* ページ全体 */
+/* =====================================
+   背景：ピンク × 水色グラデーション
+===================================== */
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg,
+            #fac1da 0%,
+            #f8dff0 35%,
+            #e3eaff 70%,
+            #ade6ff 100%);
+    background-attachment: fixed;
+    color: #76536a;
+}
+
+/* =====================================
+   メインヘッダー
+===================================== */
+
+.fan-header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 65px 20px 55px;
+    text-align: center;
+
+    /* ピンク × 水色のグラデーション */
+    background: linear-gradient(120deg,
+            #f5aeca 0%,
+            #ffffff 45%,
+            #a8cfff 100%);
+
+    border-bottom: 3px solid #f5c6dc;
+}
+
+/* 背景の装飾 */
+.fan-header::before,
+.fan-header::after {
+    position: absolute;
+    content: "✧";
+
+    color: #edb3d0;
+    font-size: 65px;
+    opacity: 0.55;
+}
+
+.fan-header::before {
+    top: 25px;
+    left: 7%;
+}
+
+.fan-header::after {
+    right: 8%;
+    bottom: 20px;
+    color: #b9ddeb;
+}
+
+/* ヘッダー内側 */
+.fan-header-inner {
+    position: relative;
+    z-index: 1;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 英字タイトル */
+.fan-header-en {
+    margin: 0 0 12px;
+
+    color: #c58aa9;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+/* メインタイトル */
+.fan-header h1 {
+    margin: 0;
+
+    color: #c65f92;
+    font-family: "Yomogi", cursive;
+    font-size: clamp(25px, 4vw, 43px);
+    font-weight: bold;
+    line-height: 1.6;
+
+    text-shadow: 2px 3px 0 #ffffff;
+}
+
+/* タイトル周辺の装飾 */
+.fan-header-decoration {
+    margin-bottom: 15px;
+
+    color: #df9abb;
+    font-size: 22px;
+    letter-spacing: 0.3em;
+}
+
+/* キャッチコピー */
+.fan-header-ribbon {
+    display: inline-block;
+
+    margin: 25px auto 15px;
+    padding: 12px 35px;
+
+    color: #ffffff;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+
+    background: linear-gradient(100deg, #e58db5, #d879a8);
+    border-radius: 40px;
+
+    box-shadow: 0 4px 10px #d68eae55;
+}
+
+/* 紹介文 */
+.fan-header-message {
+    display: inline-block;
+
+    margin: 10px auto;
+    padding: 17px 28px;
+
+    color: #92677e;
+    font-size: 15px;
+    line-height: 2;
+
+    background: #ffffffc9;
+    border: 1px solid #f2d0e0;
+    border-radius: 18px;
+
+    box-shadow: 0 4px 12px #c88ca522;
+}
+
+/* 最下部のメッセージ */
+.fan-header-bottom {
+    margin-top: 20px;
+
+    color: #bd83a3;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+/* =====================================
+   メインコンテンツ
+===================================== */
+
+.fan-main {
+    width: min(1100px, 94%);
+    margin: 35px auto 70px;
+}
+
+/* 各セクション */
+.fan-section {
+    position: relative;
+
+    margin: 35px 0;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #f5d6e4;
+    border-radius: 24px;
+
+    box-shadow: 0 5px 18px rgba(190, 110, 150, 0.08);
+}
+
+/* セクション見出し */
+.fan-section>h2 {
+    position: relative;
+
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+
+    color: #c65f92;
+    font-size: clamp(20px, 3vw, 25px);
+    text-align: center;
+
+    border-bottom: 2px dashed #f1c2d8;
+}
+
+/* 見出しの装飾 */
+.fan-section>h2::before {
+    content: "🎀 ";
+}
+
+.fan-section>h2::after {
+    content: " 🐾";
+}
+
+/* =====================================
+   おすすめカード
+===================================== */
+
+#today-pick {
+    padding: 10px;
+}
+
+#today-pick .fan-letter {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#today-pick .fan-letter:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 9px 22px rgba(190, 100, 145, 0.2);
+}
+
+/* =====================================
+   参加案内
+===================================== */
+
+.participation-section {
+    background:
+        linear-gradient(135deg, #fff2f8, #fffaf0);
+}
+
+.application-notice {
+    box-shadow: 0 5px 15px rgba(190, 100, 145, 0.1);
+}
+
+.application-button {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.application-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(190, 80, 130, 0.25);
+}
+
+/* =====================================
+   スマートフォン
+===================================== */
+
+@media (max-width: 600px) {
+
+    .fan-header {
+        padding: 45px 15px 35px;
+    }
+
+    .fan-header::before,
+    .fan-header::after {
+        font-size: 38px;
+    }
+
+    .fan-header h1 {
+        font-size: 25px;
+    }
+
+    .fan-header-en {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+    }
+
+    .fan-header-ribbon {
+        margin-top: 20px;
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    .fan-header-message {
+        padding: 13px 15px;
+        font-size: 13px;
+    }
+
+    .fan-header-bottom {
+        font-size: 11px;
+    }
+
+    .fan-main {
+        width: 94%;
+        margin-top: 22px;
+    }
+
+    .fan-section {
+        margin: 22px 0;
+        padding: 18px 12px;
+        border-radius: 18px;
+    }
+
+    .fan-section>h2 {
+        font-size: 19px;
+    }
+}
+
+
+
+/* =====================================
+   カラフルメモリー
+   やさしいパステルカラー調整
+===================================== */
+
+/* ページ背景 */
+body {
+    background: linear-gradient(135deg,
+            #FCECF4 0%,
+            #F9EFF7 50%,
+            #E7F3FC 100%);
+    color: #76536A;
+}
+
+/* ヘッダー */
+.fan-header {
+    background: linear-gradient(115deg,
+            #F6C7DC 0%,
+            #F8E0ED 48%,
+            #D9E9FC 100%);
+    border-bottom: 3px solid #EABBD3;
+}
+
+/* ヘッダータイトル */
+.fan-header h1 {
+    color: #B96791;
+    text-shadow: 0 1px 2px #FFFFFF80;
+}
+
+/* キャッチコピー */
+.fan-header-ribbon {
+    background: #E59ABC;
+    color: #FFFFFF;
+}
+
+/* ヘッダー説明文 */
+.fan-header-message {
+    color: #89627A;
+}
+
+/* セクション */
+.fan-section {
+    background: rgba(255, 252, 254, 0.96);
+    border: 1px solid #F0D0E0;
+    box-shadow: 0 4px 14px #C99AB520;
+}
+
+/* セクション見出し */
+.fan-section>h2 {
+    color: #C66F99;
+    border-bottom-color: #EBC4D8;
+}
+
+/* 手紙カード */
+.fan-letter {
+    background: #FFFAFC;
+    border-color: #EBA9C9;
+    box-shadow: 0 3px 10px #D9A9C020;
+}
+
+/* カード内の名前 */
+.letter-name {
+    color: #C66F99;
+}
+
+/* カテゴリーボタン */
+.filter-button {
+    background: #FFF9FC;
+    color: #A86D8A;
+    border-color: #EBC3D7;
+}
+
+/* 選択中のカテゴリー */
+.filter-button.active {
+    background: #DF91B5;
+    color: #FFFFFF;
+    border-color: #DF91B5;
+}
+
+/* 検索欄 */
+.fan-search input {
+    background: #FFFFFF;
+    border-color: #C5DDF0;
+    color: #76536A;
+}
+
+/* 応募案内 */
+.application-notice {
+    background: linear-gradient(120deg,
+            #FFF0F6,
+            #EDF6FC);
+    border-color: #EBC3D7;
+}
+
+/* 応募ボタン */
+.application-button {
+    background: #DF91B5;
+    color: #FFFFFF;
+    border-color: #DF91B5;
+}
+
+
+/* =====================================
+   注意書きカード
+===================================== */
+
+.notice-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 10px 0 35px;
+}
+
+.notice-card {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background: linear-gradient(120deg,
+            #FFF8FC,
+            #F5FAFF);
+    border: 2px solid #EDC4DC;
+    border-radius: 22px;
+    box-shadow: 0 5px 16px #C99AB520;
+}
+
+/* 見出し */
+.notice-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.notice-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #FCE3EF;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.notice-en {
+    margin: 0 0 4px;
+    color: #B77A9B;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.notice-heading h2 {
+    margin: 0;
+    color: #C66F99;
+    font-size: 21px;
+}
+
+/* 説明文 */
+.notice-message {
+    margin-bottom: 20px;
+    color: #80677A;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 注意事項リスト */
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #F0D7E5;
+    border-radius: 14px;
+}
+
+.notice-number {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    background: #F9E4EF;
+    color: #C66F99;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.notice-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #A85F83;
+    font-size: 14px;
+}
+
+.notice-list p {
+    margin: 0;
+    color: #806F7B;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* 最後のメッセージ */
+.notice-footer {
+    margin-top: 22px;
+    text-align: center;
+    color: #C66F99;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+
+    .notice-section {
+        padding: 5px 10px 25px;
+    }
+
+    .notice-card {
+        padding: 20px 15px;
+        border-radius: 18px;
+    }
+
+    .notice-heading {
+        gap: 10px;
+    }
+
+    .notice-heading h2 {
+        font-size: 17px;
+    }
+
+    .notice-message {
+        font-size: 13px;
+    }
+
+    .notice-list li {
+        gap: 10px;
+        padding: 12px 10px;
+    }
+
+    .notice-list strong {
+        font-size: 13px;
+    }
+
+    .notice-list p {
+        font-size: 12px;
+    }
+
+    .notice-footer {
+        font-size: 11px;
     }
 }
